@@ -8,6 +8,7 @@ fun main() = application {
         onCloseRequest = ::exitApplication,
         title = "Habit Tracker",
     ) {
+        KoinModule.initKoin()
         App()
     }
 }
