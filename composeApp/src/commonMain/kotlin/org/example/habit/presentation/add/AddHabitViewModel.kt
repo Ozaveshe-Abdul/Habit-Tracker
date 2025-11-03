@@ -35,7 +35,7 @@ class AddHabitViewModel(private val repository: HabitRepository) : ViewModel() {
     }
 
    private fun addHabit(){
-       _uiState.value.habitName.takeIf{ !it.isNullOrEmpty() }
+       _uiState.value.habitName.takeIf{ !it.isEmpty() }
            ?.let { habitName ->
                viewModelScope.launch {
 

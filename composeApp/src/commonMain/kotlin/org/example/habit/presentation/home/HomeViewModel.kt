@@ -3,22 +3,16 @@ package org.example.habit.presentation.home
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.flow.onStart
-import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
-import org.example.habit.data.entities.HabitEntity
-import org.example.habit.data.entities.toHabit
-import org.example.habit.domain.repository.HabitRepository
-import kotlin.math.max
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.todayIn
+import org.example.habit.data.entities.HabitEntity
+import org.example.habit.data.entities.toHabit
 import org.example.habit.data.entities.toHabitEntity
 import org.example.habit.domain.models.Habit
+import org.example.habit.domain.repository.HabitRepository
+import kotlin.math.max
 import kotlin.time.Clock
 import kotlin.time.ExperimentalTime
 
