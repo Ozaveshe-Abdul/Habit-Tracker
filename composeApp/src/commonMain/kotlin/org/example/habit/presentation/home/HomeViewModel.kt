@@ -39,9 +39,9 @@ class HomeViewModel(private val repository: HabitRepository) : ViewModel() {
 
     fun updateDoneState(habit: Habit) {
         viewModelScope.launch {
-            val increaseStreak = !habit.isDone
-            val modifiedHabit = habit.copy(isDone = true, streakCount = if (increaseStreak) habit.streakCount + 1 else habit.streakCount)
-            repository.insertHabit(modifiedHabit.toHabitEntity())
+//            val increaseStreak = !habit.isDone
+            val modifiedHabit = habit.toHabitEntity().increaseStreak()
+            repository.insertHabit(modifiedHabit)
 
         }
     }

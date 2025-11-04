@@ -74,7 +74,7 @@ fun HabitCard(habit: Habit, onClick: () -> Unit, modifier: Modifier = Modifier) 
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Text(
-                        text = "⚡streak⚡ ⚡ ${habit.streakCount}",
+                        text = "⚡streak⚡ ${habit.streakCount}",
                         color = MaterialTheme.colorScheme.tertiary,
                         fontWeight = FontWeight.Bold
                     )

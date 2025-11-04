@@ -22,10 +22,11 @@ data class HabitEntity @OptIn(ExperimentalTime::class) constructor(
     */
     fun increaseStreak(): HabitEntity {
         // If not done, just return the original object. No change.
-        if (!isDone) return this
+        if (isDone) return this
 
         val newStreak = streakCount + 1
         return this.copy(
+            isDone = true,
             streakCount = newStreak,
             highestStreak = max(highestStreak, newStreak) // Update highestStreak
         )
