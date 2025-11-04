@@ -60,6 +60,8 @@ kotlin {
             implementation(libs.koin.compose)
             implementation(libs.koin.composeVM)
             implementation(libs.kotlinx.datetime)
+            implementation("org.jetbrains.compose.material:material-icons-extended:1.7.3")
+//            implementation(compose.materialIcons)
 
         }
         commonTest.dependencies {

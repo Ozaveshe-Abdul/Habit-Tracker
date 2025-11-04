@@ -15,7 +15,7 @@ import org.example.habit.domain.models.Habit
 fun HabitsList(habits: List<Habit>, onDeleteClick: (Long) -> Unit, onCheck: (Habit) -> Unit, modifier: Modifier = Modifier) {
 //    val list = remember { mutableStateOf(habits) }
 
-    LazyColumn(modifier = modifier, contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+    LazyColumn(modifier = modifier, contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
 
         items(habits, key = {it.id}) { habit ->
             TornadoDeleteContainer(

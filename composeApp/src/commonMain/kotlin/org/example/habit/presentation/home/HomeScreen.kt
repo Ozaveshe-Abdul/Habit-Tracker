@@ -5,8 +5,11 @@ package org.example.habit.presentation.home
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -32,7 +35,7 @@ private fun HomeScreen(uiState: HomeUiState, onDeleteClick: (Long) -> Unit, onCh
         },
         floatingActionButton = {
             FloatingActionButton(onClick = { viewModel.actions(AddScreenEvent.FloatingButtonClick) }) {
-//                Icon(imageVector = )
+                Icon(imageVector = Icons.Default.Add, contentDescription = null)
             }
         }
     ) { innerPadding ->
